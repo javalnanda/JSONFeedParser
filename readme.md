@@ -1,7 +1,7 @@
 # JSONFeedParser
 
 ### Description
-JSonFeedParser is built to using __MVP (Model View Presenter)__ and __Clean Architecture__ concepts.
+JSonFeedParser is built using __MVP (Model View Presenter)__ and __Clean Architecture__ concepts.
 It uses http://jsonplaceholder.typicode.com/posts url for displaying the Posts screen data
 and http://jsonplaceholder.typicode.com/comments?postId=1 url for displaying the details screen data.
 
