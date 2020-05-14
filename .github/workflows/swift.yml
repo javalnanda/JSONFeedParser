@@ -10,10 +10,15 @@ jobs:
   build:
 
     runs-on: macos-latest
-
+    strategy:
+        matrix:
+          destination: ['platform=iOS Simulator,OS=13.0,name=iPhone X']
     steps:
     - uses: actions/checkout@v2
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+    - name: Build and test
+      run: |
+          cd Texstyle
+          xcodebuild clean test -project JSONFeedParser.xcodeproj -scheme JSONFeedParser -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+          bash <(curl -s https://codecov.io/bash)
+      env: 
+         destination: ${{ matrix.destination }}
