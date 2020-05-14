@@ -1,3 +1,6 @@
+[![Actions Status](https://github.com/javalnanda/JSONFeedParser/workflows/Build%20and%20test/badge.svg)](https://github.com/javalnanda/JSONFeedParser/actions)
+[![codecov](https://codecov.io/gh/javalnanda/JSONFeedParser/branch/master/graph/badge.svg)]
+
 # JSONFeedParser
 
 ### Description
